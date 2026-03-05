@@ -7,6 +7,8 @@
 
 Predict whether passengers are transported in the **Spaceship Titanic** dataset using a full ML pipeline, including data preprocessing, model training, MLflow tracking, Flask API deployment, and data drift monitoring.
 
+https://www.kaggle.com/competitions/spaceship-titanic
+
 ---
 
 ## 📂 Project Structure
