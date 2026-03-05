@@ -1,0 +1,56 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Spaceship Titanic — Data Drift Dashboard</title>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <style>
+                body { font-family: Arial, sans-serif; }
+                h2 { text-align: center; }
+                .container { width: 90%; margin: 20px auto; }
+                table { border-collapse: collapse; width: 100%; margin-top: 30px; }
+                th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+                th { background-color: #f2f2f2; }
+            </style>
+        </head>
+        <body>
+            <h2>Spaceship Titanic — Data Drift Dashboard</h2>
+            <div class="container">
+                <canvas id="driftChart"></canvas>
+            </div>
+            <div class="container">
+                <table>
+                    <tr><th>Feature</th><th>Drift Value</th></tr>
+                    <tr style='background-color:#f8d7da'><td>ValueDrift(column=HomePlanet,method=Jensen-Shannon distance,threshold=0.1)</td><td>0.833</td></tr><tr style='background-color:#f8d7da'><td>ValueDrift(column=VRDeck,method=Jensen-Shannon distance,threshold=0.1)</td><td>0.833</td></tr><tr style='background-color:#f8d7da'><td>ValueDrift(column=Destination,method=Jensen-Shannon distance,threshold=0.1)</td><td>0.833</td></tr><tr style='background-color:#f8d7da'><td>ValueDrift(column=Age,method=Jensen-Shannon distance,threshold=0.1)</td><td>0.833</td></tr><tr style='background-color:#f8d7da'><td>ValueDrift(column=VIP,method=Jensen-Shannon distance,threshold=0.1)</td><td>0.807</td></tr><tr style='background-color:#f8d7da'><td>ValueDrift(column=CryoSleep,method=Jensen-Shannon distance,threshold=0.1)</td><td>0.676</td></tr><tr style='background-color:transparent'><td>ValueDrift(column=RoomService,method=Jensen-Shannon distance,threshold=0.1)</td><td>0.483</td></tr><tr style='background-color:transparent'><td>ValueDrift(column=Spa,method=Jensen-Shannon distance,threshold=0.1)</td><td>0.480</td></tr><tr style='background-color:transparent'><td>ValueDrift(column=ShoppingMall,method=Jensen-Shannon distance,threshold=0.1)</td><td>0.474</td></tr><tr style='background-color:transparent'><td>ValueDrift(column=FoodCourt,method=Jensen-Shannon distance,threshold=0.1)</td><td>0.380</td></tr>
+                </table>
+            </div>
+            <script>
+                const ctx = document.getElementById('driftChart').getContext('2d');
+                const chart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['ValueDrift(column=HomePlanet,method=Jensen-Shannon distance,threshold=0.1)', 'ValueDrift(column=VRDeck,method=Jensen-Shannon distance,threshold=0.1)', 'ValueDrift(column=Destination,method=Jensen-Shannon distance,threshold=0.1)', 'ValueDrift(column=Age,method=Jensen-Shannon distance,threshold=0.1)', 'ValueDrift(column=VIP,method=Jensen-Shannon distance,threshold=0.1)', 'ValueDrift(column=CryoSleep,method=Jensen-Shannon distance,threshold=0.1)', 'ValueDrift(column=RoomService,method=Jensen-Shannon distance,threshold=0.1)', 'ValueDrift(column=Spa,method=Jensen-Shannon distance,threshold=0.1)', 'ValueDrift(column=ShoppingMall,method=Jensen-Shannon distance,threshold=0.1)', 'ValueDrift(column=FoodCourt,method=Jensen-Shannon distance,threshold=0.1)'],
+                        datasets: [{
+                            label: 'Drift (Jensen-Shannon distance)',
+                            data: [0.8325546111576978, 0.8325546111576978, 0.8325546111576977, 0.8325546111576977, 0.8066352435152992, 0.6757493971305824, 0.48298348466891344, 0.47965093858856156, 0.4742444791636533, 0.37967609598515206],
+                            backgroundColor: ['rgba(255, 99, 132, 0.7)', 'rgba(255, 99, 132, 0.7)', 'rgba(255, 99, 132, 0.7)', 'rgba(255, 99, 132, 0.7)', 'rgba(255, 99, 132, 0.7)', 'rgba(255, 99, 132, 0.7)', 'rgba(54, 162, 235, 0.7)', 'rgba(54, 162, 235, 0.7)', 'rgba(54, 162, 235, 0.7)', 'rgba(54, 162, 235, 0.7)'],
+                            borderColor: ['rgba(255, 99, 132, 1)', 'rgba(255, 99, 132, 1)', 'rgba(255, 99, 132, 1)', 'rgba(255, 99, 132, 1)', 'rgba(255, 99, 132, 1)', 'rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)'],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 1
+                            }
+                        },
+                        plugins: {
+                            legend: { display: false }
+                        }
+                    }
+                });
+            </script>
+        </body>
+        </html>
+        

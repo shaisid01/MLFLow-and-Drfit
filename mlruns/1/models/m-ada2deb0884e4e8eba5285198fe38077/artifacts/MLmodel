@@ -1,0 +1,23 @@
+artifact_path: file:C:/Shailaja/Prod_ready_AI_Project/spaceship-titanic-ml/mlruns/1/models/m-ada2deb0884e4e8eba5285198fe38077/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.7
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.4.2
+    skops_trusted_types: null
+mlflow_version: 3.10.0
+model_id: m-ada2deb0884e4e8eba5285198fe38077
+model_size_bytes: 2244318
+model_uuid: m-ada2deb0884e4e8eba5285198fe38077
+prompts: null
+run_id: 21d198767555486c97e7d0b87ee4ddda
+utc_time_created: '2026-03-04 23:34:13.787852'

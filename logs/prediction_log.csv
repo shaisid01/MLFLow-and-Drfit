@@ -1,0 +1,7 @@
+PassengerId,Name,HomePlanet,CryoSleep,Cabin,Destination,Age,VIP,RoomService,FoodCourt,ShoppingMall,Spa,VRDeck,Transported,timestamp
+string,string,string,True,string,string,0,True,0,0,0,0,0,1,2026-03-05T00:40:44.653536
+0001_02,Earth,False,B/0/P,TRAPPIST-1e,27,False,0,50,0,10,5,Mary Doe,0,2026-03-05T00:41:08.553661
+0001_01,Europa,False,B/0/P,TRAPPIST-1e,29,False,0,0,0,0,0,John Doe,1,2026-03-05T00:41:50.603537
+string,string,string,True,string,string,0,True,0,0,0,0,0,1,2026-03-05T00:47:38.070712
+0001_01,Europa,False,B/0/P,TRAPPIST-1e,29,False,0,0,0,0,0,John Doe,1,2026-03-05T00:48:05.132699
+0001_02,Earth,False,B/0/P,TRAPPIST-1e,27,False,0,50,0,10,5,Mary Doe,0,2026-03-05T00:48:22.518841
