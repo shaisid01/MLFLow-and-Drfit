@@ -62,7 +62,7 @@ Register and optionally promote model to Production
 ```
 python train_and_promote.py
 ```
-##🌐 API(app.py)
+## 🌐 API(app.py)
 **Endpoints**
 
 | Endpoint              | Method | Description                                  |
@@ -108,12 +108,12 @@ python app.py
 pip install pandas scikit-learn joblib mlflow flask flask-restx evidently
 ```
 
-##📈 Monitoring & Data Drift ##
+## 📈 Monitoring & Data Drift 
 * Logs predictions to logs/prediction_log.csv
 * Generates interactive HTML dashboard via /generate_dashboard
 * Detects drift in features and highlights high-drift features (>0.5)
 
-##🔧 Next Steps ##
+## 🔧 Next Steps 
 * Add batch predictions endpoint
 * Improve feature engineering for better model performance
 * Automate dashboard generation with scheduled jobs
